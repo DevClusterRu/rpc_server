@@ -17,6 +17,7 @@ func RPCStart() {
 	rpc.HandleHTTP()
 
 	l, e := net.Listen("tcp", ":4466")
+
 	if e != nil {
 		log.Fatalf("Couldn't start listening on port 4466. Error %s", e)
 	}
