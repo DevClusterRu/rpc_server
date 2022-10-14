@@ -5,7 +5,7 @@ RUN go mod download
 RUN go build -o main
 
 FROM alpine:3
-COPY --from=builder main /bin/main
+COPY --from=builder /app/main /bin/main
 
 EXPOSE 4466
 
